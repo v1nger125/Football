@@ -1,0 +1,32 @@
+
+<div class="search">
+  <label for="date1" class="search_text">
+    from
+  </label>
+  <input id="date1" type="date" [formControl]="date1" class="search_area">
+  <label for="date2" class="search_text">
+    to
+  </label>
+  <input id="date2" type="date" [formControl]="date2" class="search_area">
+</div>
+
+<div class="matches">
+
+  <div *ngFor='let match of matches'>
+    <div *ngIf='match.utcDate > date1.value && match.utcDate < date2.value' class="matches_item">
+      <div class="matches_item_info">
+        <div class="matches_item_text_box match_item_text">
+          <span class="home"> HOME TEAM </span>
+          <span> {{ match.homeTeam.name }} </span>
+        </div>
+        <span class="matches_item_text_box score match_item_text"> {{ match.score.fullTime.homeTeam }} - {{ match.score.fullTime.awayTeam }} </span>
+        <div class="matches_item_text_box match_item_text">
+          <span> {{ match.awayTeam.name }}  </span>
+          <span class="away"> AWAY TEAM </span>
+        </div>
+      </div>
+      <span class="matches_item_date match_item_text"> {{ match.utcDate | date }} </span>
+    </div>
+  </div>
+
+</div>

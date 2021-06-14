@@ -1,0 +1,20 @@
+<div class="search">
+  <label for="name" class="search_text">
+    Search by name
+  </label>
+  <input id="name" type="text" [formControl]="name" class="search_area">
+</div>
+
+<div class="teams">
+
+  <div *ngFor='let team of teams'>
+    <div *ngIf='team.name.includes(name.value)' class="teams_item">
+      <div class="teams_item_info">
+        <span class="teams_item_text"> {{ team.name }} </span>
+        <span class="teams_item_text"> colors: {{ team.clubColors }} </span>
+      </div>
+      <a [routerLink]="['/teams', team.id, 'matches']" class="teams_item_link">matches</a>
+    </div>
+  </div>
+
+</div>

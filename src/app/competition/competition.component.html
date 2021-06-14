@@ -1,0 +1,31 @@
+
+<div class="search">
+  <label for="name" class="search_text">
+    Search by name
+  </label>
+  <input id="name" type="text" [formControl]="name" class="search_area">
+</div>
+
+<div class="competitions">
+  <div *ngFor='let comp of competitions'>
+    <div *ngIf='comp.name.includes(name.value)' class="competitions_item">
+      <div class="competitions_item_info">
+        <div class="competitions_item_info_helper">
+          <div>
+            <span class="competitions_item_text"> {{ comp.name }} </span>
+          </div>
+          <span class="competitions_item_text"> {{ comp.area.name }} </span>
+          <span class="competitions_item_text"> seasons: {{ comp.numberOfAvailableSeasons }} </span>
+        </div>
+        <div class="competitions_item_info_helper">
+          <div *ngIf='comp.currentSeason' class="competitions_item_text"> current season start: {{ comp.currentSeason.startDate | date }} </div>
+          <div *ngIf='comp.currentSeason' class="competitions_item_text"> current season end: {{ comp.currentSeason.endDate | date }} </div>
+        </div>
+      </div>
+      <div class="competitions_links">
+        <a [routerLink]="['/competitions', comp.id, 'matches']" class="competitions_links_text">matches</a>
+        <a [routerLink]="['/competitions', comp.id, 'teams']" class="competitions_links_text right_border">teams</a>
+      </div>
+    </div>
+  </div>
+</div>

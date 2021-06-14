@@ -1,0 +1,47 @@
+.competitions{
+  width: 100%;
+  min-height: 600px;
+}
+.competitions_item{
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: rgb(64, 125, 221) solid 3px;
+}
+.competitions_links{
+  display: flex;
+  justify-content: center;
+  width: 20%;
+  height: 100%;
+}
+.competitions_links_text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 50%;
+  border-left: 1px solid rgb(64, 125, 221);
+  text-decoration: none;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: medium;
+  color: black;
+}
+.right_border{
+  border-right: 1px solid rgb(64, 125, 221);
+}
+.competitions_item_info{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  height: 100%;
+}
+.competitions_item_text{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: medium;
+}
+.competitions_item_info_helper{
+  width: 50%;
+}
