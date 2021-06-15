@@ -2,6 +2,12 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20.
 
+## Angular structure
+
+Competition - list of all competitions  
+Teams - list of teams, contains 2 components with one css and html, competition-team - list of the teams for single competition
+Competition-detail - list of matches, contains 2 components with one css and html, team-details - list of the matches for single team
+
 ## GH-pages
 
 https://v1nger125.github.io/Football/competitions
